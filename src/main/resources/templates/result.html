@@ -20,7 +20,14 @@
     <div class="page-title">概算お見積り結果</div>
     <div class="col-sm-12">
       <div class="text-center">
-        <div class="primary-text"><span th:text="${price}"></span>円</div>
+        <th:block th:if="${price <= 100000}">
+          <p><div class="primary-text"><span th:text="${price}"></span>円</div>
+          </p>
+      </th:block>
+      <th:block th:if="${price >= 100000}">
+          <p><div class="primary-text"></span>店舗にお問い合わせください。</div>
+          </p>
+      </th:block>
         <button type="submit" name="complete" class="btn btn-primary">詳細見積もり依頼へ</button>
       </div>
       <div class="sub-title">お客様情報</div>
