@@ -20,11 +20,11 @@
     <div class="page-title">概算お見積り結果</div>
     <div class="col-sm-12">
       <div class="text-center">
-        <th:block th:if="${price <= 100000}">
+        <th:block th:if="${price <= 500000}">
           <p><div class="primary-text"><span th:text="${price}"></span>円</div>
           </p>
       </th:block>
-      <th:block th:if="${price >= 100000}">
+      <th:block th:if="${price >= 500000}">
           <p><div class="primary-text"></span>店舗にお問い合わせください。</div>
           </p>
       </th:block>
