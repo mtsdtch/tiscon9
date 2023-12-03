@@ -40,6 +40,11 @@ public class UserOrderForm {
     @NotBlank
     private String hikkoshiDate;
 
+    
+
+    private String numberofpeople ;
+
+
     @Numeric
     @NotBlank
     private String box;
@@ -121,6 +126,14 @@ public class UserOrderForm {
 
     public void setHikkoshiDate(String hikkoshiDate) {
         this.hikkoshiDate = hikkoshiDate;
+    }
+
+    public String getNumberofpeople() {
+        return numberofpeople;
+    }
+
+    public void setNumberofpeople(String numberofpeople) {
+        this.numberofpeople = numberofpeople;
     }
 
     public String getBox() {
