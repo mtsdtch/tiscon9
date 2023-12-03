@@ -92,7 +92,23 @@ public class EstimateService {
             priceForOptionalService = estimateDAO.getPricePerOptionalService(OptionalServiceType.WASHING_MACHINE.getCode());
         }
 
-        return priceForDistance + pricePerTruck + priceForOptionalService;
+        double seasonalRate = 0.0;
+
+        int hikkoshiDate = Integer.parseInt(dto.getHikkoshiDate());
+        if ((hikkoshiDate == 3) || (hikkoshiDate == 4)){
+            seasonalRate = 1.5;
+            // System.out.println(seasonalRate);
+        }else if (hikkoshiDate == 9){
+            seasonalRate = 1.2;
+            // System.out.println(seasonalRate);
+        }else{
+            seasonalRate = 1.0;
+            // System.out.println(seasonalRate);
+        }
+        System.out.println(seasonalRate);
+
+        // return priceForDistance + pricePerTruck + priceForOptionalService;
+        return Math.toIntExact(Math.round((priceForDistance + pricePerTruck) * seasonalRate + priceForOptionalService));
     }
 
     /**

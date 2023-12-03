@@ -16,6 +16,8 @@ public class UserOrderDto {
 
     private String newAddress;
 
+    private String hikkoshiDate;
+
     private String box;
 
     private String bed;
@@ -80,6 +82,14 @@ public class UserOrderDto {
 
     public void setNewAddress(String newAddress) {
         this.newAddress = newAddress;
+    }
+
+    public String getHikkoshiDate() {
+        return hikkoshiDate;
+    }
+
+    public void setHikkoshiDate(String hikkoshiDate) {
+        this.hikkoshiDate = hikkoshiDate;
     }
 
     public int getBox() {

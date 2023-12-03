@@ -38,6 +38,10 @@ public class UserOrderForm {
 
     @Numeric
     @NotBlank
+    private String hikkoshiDate;
+
+    @Numeric
+    @NotBlank
     private String box;
 
     @Numeric
@@ -109,6 +113,14 @@ public class UserOrderForm {
 
     public void setNewAddress(String newAddress) {
         this.newAddress = newAddress;
+    }
+
+    public String getHikkoshiDate() {
+        return hikkoshiDate;
+    }
+
+    public void setHikkoshiDate(String hikkoshiDate) {
+        this.hikkoshiDate = hikkoshiDate;
     }
 
     public String getBox() {
